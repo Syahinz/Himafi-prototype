@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/src/assets/logo/HIMAFI.PNG" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>himafi-prototype</title>
+  </head>
+  <body>
+    <div id="app" class="">
+      <!-- nav start -->
+<nav class="navbar relative w-full flex justify-center z-50">
+        <!-- Container Pill Utama -->
+        <div class="nav-container relative z-20 w-full max-w-7xl">
+          <img src="/src/assets/logo/HIMAFI.PNG" class="navbar-icon" alt="Logo" />
+          
+          <!-- Menu Desktop -->
+          <div class="hidden md:flex">
+            <ul class="flex gap-8">
+              <li><a href="#" class="a-menu">Beranda</a></li>
+              <li><a href="#" class="a-menu">Departemen</a></li>
+              <li><a href="#" class="a-menu">Tentang</a></li>
+              <li><a href="#" class="a-menu">Kontak</a></li>
+              <li><a href="#" class="a-menu">FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Tombol Hamburger Mobile -->
+          <div class="inset-y-0 left-0 flex items-center md:hidden">
+            <button
+              type="button"
+              id="hamburger"
+              aria-expanded="false"
+              class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-800 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-darken"
+            >
+              <span class="sr-only">Open main menu</span>
+              <!-- Ikon Garis Tiga (Menu) -->
+              <svg
+                id="icon-menu"
+                class="block h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              <!-- Ikon Silang (X) -->
+              <svg
+                id="icon-close"
+                class="hidden h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        
+        <!-- ========================================== -->
+        <!-- BLOK MOBILE MENU (Dropdown)                -->
+        <!-- ========================================== -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full px-4 mt-2 z-10 md:hidden">
+          <div class="bg-white rounded-2xl shadow-xl ring-1 ring-black/5 px-4 pt-2 pb-4 space-y-2">
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary">Beranda</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary">Departemen</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary">Tentang</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary">Kontak</a>
+            <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-gray-800 hover:bg-gray-100 hover:text-primary">FAQ</a>
+          </div>
+        </div>
+        <!-- Akhir Blok Mobile Menu -->
+        
+      </nav>
+      <!-- nav end -->
+
+      <!-- hero section -->
+      <section
+        id="home"
+        class="pt-36 bg-secondary-bright lg:pt-0 lg:flex lg:justify-center"
+      >
+        <div class="container p-6">
+          <div
+            class="flex flex-col md:flex-row items-center justify-center lg:h-screen md:justify-between md:w-full"
+          >
+            <div class="w-full self-center text-primary md:w-1/2">
+              <h1 class="headline-text text-6xl">
+                HIMA<span class="text-green-900">FI</span>
+              </h1>
+
+              <h4
+                class="text-center text-2xl font-subhead px-3 md:text-left md:px-10 lg:text-4xl"
+              >
+                UIN Syarif Hidayatullah Jakarta
+              </h4>
+              <p class="isi-text text-gray-800">
+                Kabinet Samanvaya hadir sebagai poros stabilitas dan sinergitas
+                HIMAFI UIN Syarif Hidayatullah Jakarta. Kami berkomitmen penuh
+                mewujudkan tata kelola organisasi yang integratif, akuntabel,
+                dan profesional untuk menjalin kolaborasi strategis dengan
+                berbagai kemitraan.
+              </p>
+              <!-- call to action -->
+              <div class="cta-container">
+                <a
+                  href="#"
+                  class="cta-button text-secondary-bright bg-primary-darken"
+                >
+                  Get Started
+                </a>
+              </div>
+            </div>
+            <!-- hero image  -->
+            <div
+              class="w-full mt-12 md:mt-0 md:w-1/2 flex justify-center md:justify-end items-center"
+            >
+              <img
+                src="/src/assets/logo/KABINET.png"
+                class="w-4/5 max-w-md md:max-w-lg object-contain"
+                alt="Logo Kabinet"
+              />
+            </div>
+            <!-- hero image end -->
+          </div>
+        </div>
+      </section>
+      <!-- hero end -->
+
+      <!-- about -->
+      <section
+        class="w-full py-10 lg:h-screen bg-primary-darken text-secondary-bright md:flex md:items-center"
+      >
+        <div class="p-6 flex flex-col w-full md:flex-row md:justify-between">
+          <!-- teks -->
+          <div class="flex flex-col w-full md:w-1/2">
+            <h1 class="headline-text-achieve text-4xl">Pencapaian</h1>
+            <p class="isi-text">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Aspernatur ducimus aliquid quos aperiam odio impedit sequi culpa
+              enim. Aliquam amet similique harum magni recusandae tempore
+              suscipit nihil quidem quam totam cum aperiam quasi iste sed,
+              cupiditate est nesciunt, repellendus molestiae numquam modi eum.
+              Numquam reprehenderit atque, praesentium beatae quae nihil?
+            </p>
+            <!-- cta -->
+            <div class="cta-container appear-anim">
+              <a
+                href="#"
+                class="cta-button bg-secondary-bright text-primary-darken"
+                >Pelajari lebih lanjut</a
+              >
+            </div>
+          </div>
+          <!-- foto -->
+          <div class="w-4/5 md:w-3xl mt-8 mx-auto md:pr-6 md:mt-0">
+            <img
+              src="/src/assets/img/DSCF6893.JPG"
+              class="rounded-lg object-cover h-96 lg:h-full appear-anim"
+              alt="achievement foto"
+            />
+          </div>
+        </div>
+      </section>
+      <!-- about end -->
+
+      <!-- Structure -->
+      <section
+        class="bg-secondary-bright flex flex-col py-10 text-primary-darken items-center md:h-screen md:flex-row-reverse md:justify-between"
+      >
+        <div class="p-6 md:w-1/2 md:flex md:flex-col">
+          <h1 class="headline-text-structure text-4xl">Struktur</h1>
+          <p class="isi-text-right">
+            Dibalik setiap program kerja yang sukses, terdapat sinergi kuat dari
+            para pengurus HIMAFI. inilah jajaran struktur organisasi yang
+            berkomitmen untuk membawa perubahan positif dan menjadi wadah
+            aspirasi bagi seluruh mahasiswa
+          </p>
+          <div class="cta-container-right appear-anim">
+            <a
+              href="#"
+              class="cta-button text-secondary-bright bg-primary-darken"
+            >
+              Pelajari lebih lanjut
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row md:pl-10 md:gap-10">
+          <div>
+            <div
+              class="px-6 pt-6 backdrop-blur-md bg-white/30 border border-white/20 rounded-2xl shadow-lg appear-anim"
+            >
+              <img
+                src="/src/assets/img/kak-Neiya.png"
+                alt="Neiya"
+                class="w-40 md:w-72 md:h-112 object-cover"
+              />
+            </div>
+            <h2 class="mt-2 text-center text-lg font-bold font-isi">
+              Ketua Himpunan
+            </h2>
+            <p class="text-center font-isi">Na’ilah Zahra Putri Utomo</p>
+          </div>
+          <div>
+            <div
+              class="px-6 pt-6 backdrop-blur-md bg-white/30 border border-white/20 rounded-2xl shadow-lg appear-anim"
+            >
+              <img
+                src="/src/assets/img/kak-Hary.png"
+                alt="Neiya"
+                class="w-40 md:w-72 md:h-112 object-cover"
+              />
+            </div>
+            <h2 class="mt-2 text-center text-lg font-bold font-isi">
+              Wakil Ketua Himpunan
+            </h2>
+            <p class="text-center font-isi">Hary Caesar Setiawan</p>
+          </div>
+        </div>
+      </section>
+      <!-- structure end -->
+
+      <!-- programs -->
+      <section
+        class="bg-primary flex flex-col py-10 text-secondary items-center md:h-300 md:justify-between"
+      >
+        <div class="p-6 md:w-1/2 md:flex md:flex-col">
+          <h1 class="headline-text-center text-4xl hidden md:block">
+            Program Kerja
+          </h1>
+          <h1 class="headline-text-achieve text-4xl md:hidden">Proker</h1>
+          <p class="isi-text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque harum
+            laudantium, alias officiis ullam sit nobis vel facere neque nam cum
+            enim vero reprehenderit voluptates eum aliquid illo nihil qui?
+          </p>
+        </div>
+        <div
+          class="flex flex-wrap justify-center md:grid md:grid-cols-3 md:gap-4 sm:grid-cols-2 sm:gap-10"
+        >
+          <div class="">
+            <img
+              src="/src/assets/img/gelora.JPG"
+              class="programs-card appear-anim"
+              alt=""
+            />
+            <h2 class="text-center font-bold mt-1 text-xl">PBAK</h2>
+          </div>
+          <div class="">
+            <img
+              src="/src/assets/img/gelora.JPG"
+              class="programs-card appear-anim"
+              alt=""
+            />
+            <h2 class="text-center font-bold mt-1 text-xl">Gelora</h2>
+          </div>
+          <div class="">
+            <img
+              src="/src/assets/img/gelora.JPG"
+              class="programs-card appear-anim"
+              alt=""
+            />
+            <h2 class="text-center font-bold mt-1 text-xl">Ekspedisi</h2>
+          </div>
+          <div class="">
+            <img
+              src="/src/assets/img/gelora.JPG"
+              class="programs-card appear-anim"
+              alt=""
+            />
+            <h2 class="text-center font-bold mt-1 text-xl">Spartival</h2>
+          </div>
+          <div class="">
+            <img
+              src="/src/assets/img/gelora.JPG"
+              class="programs-card appear-anim"
+              alt=""
+            />
+            <h2 class="text-center font-bold mt-1 text-xl">
+              Training organization
+            </h2>
+          </div>
+          <div class="">
+            <img
+              src="/src/assets/img/gelora.JPG"
+              class="programs-card appear-anim"
+              alt=""
+            />
+            <h2 class="text-center font-bold mt-1 text-xl">
+              Training organization
+            </h2>
+          </div>
+        </div>
+        <div class="cta-container-center appear-anim">
+          <a
+            href="#"
+            class="cta-button bg-secondary-bright text-primary-darken"
+          >
+            Pelajari lebih lanjut
+          </a>
+        </div>
+      </section>
+      <!-- programs end -->
+
+      <!-- parters -->
+
+      <section
+        class="bg-secondary-bright flex flex-col py-10 text-primary-darken items-center md:justify-between overflow-x-hidden"
+      >
+        <div>
+          <h1 class="headline-text-center text-4xl md:block font-bold">
+            Our Partner
+          </h1>
+        </div>
+
+        <!-- Wrapper animasi, space-x gw kecilin dikit di HP (8) dan gedein di Desktop (16) -->
+        <div class="flex space-x-8 md:space-x-16 overflow-hidden w-full mt-8">
+          <!-- UL Pertama (tambahin shrink-0) -->
+          <ul
+            class="flex space-x-8 md:space-x-16 animate-loop-scroll shrink-0 items-center"
+          >
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/brin.svg"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="BRIN"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/facebook.webp"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="Facebook"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/google.webp"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="Google"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/Microsoft.webp"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="Microsoft"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/uin-jakarta.png"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="UIN Jakarta"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/ROG.png"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="ROG"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/Apple.svg"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="Apple"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/Samsung.svg"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="Samsung"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/ASUS.png"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="ASUS"
+              />
+            </li>
+          </ul>
+
+          <!-- UL Kedua (Duplikat buat looping, tambahin shrink-0 juga) -->
+          <ul
+            class="flex space-x-8 md:space-x-16 animate-loop-scroll shrink-0 items-center"
+            aria-hidden="true"
+          >
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/brin.svg"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="BRIN"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/facebook.webp"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="Facebook"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/google.webp"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="Google"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/Microsoft.webp"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="Microsoft"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/uin-jakarta.png"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="UIN Jakarta"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/ROG.png"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="ROG"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/Apple.svg"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="Apple"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/Samsung.svg"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="Samsung"
+              />
+            </li>
+            <li class="shrink-0">
+              <img
+                src="src/assets/logo/ASUS.png"
+                class="w-28 h-14 md:w-40 md:h-20 max-w-none object-contain"
+                alt="ASUS"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- parters -->
+
+      <!-- footer -->
+      <footer class="bg-green-900">
+        <div
+          class="relative mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24"
+        >
+          <div
+            class="absolute inset-e-4 top-4 sm:inset-e-6 sm:top-6 lg:inset-e-8 lg:top-8"
+          >
+            <a
+              class="inline-block rounded-full bg-primary p-2 text-secondary shadow-sm transition hover:bg-neutralblack sm:p-3 lg:p-4 dark:bg-secondary-bright dark:text-primary-darken dark:hover:bg-neutralwhite"
+              href="#"
+            >
+              <span class="sr-only">Back to top</span>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="size-5"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
+          <div class="lg:flex lg:items-end lg:justify-between">
+            <div>
+              <div
+                class="flex justify-center lg:justify-start items-center gap-3"
+              >
+                <img src="/src/assets/logo/HIMAFI.PNG" class="w-20" alt="" />
+                <p class="text-secondary-bright font-bold text-2xl">HIMAFI</p>
+              </div>
+
+              <p
+                class="mx-auto mt-6 max-w-md text-center leading-relaxed text-secondary-bright lg:text-left"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Incidunt consequuntur amet culpa cum itaque neque.
+              </p>
+            </div>
+
+            <ul
+              class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:mt-0 lg:justify-end lg:gap-12"
+            >
+              <li>
+                <a
+                  class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+                  href="#"
+                >
+                  About
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+                  href="#"
+                >
+                  Services
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+                  href="#"
+                >
+                  Projects
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-gray-700 transition hover:text-gray-700/75 dark:text-white dark:hover:text-white/75"
+                  href="#"
+                >
+                  Blog
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <p
+            class="mt-12 text-center text-sm text-gray-500 lg:text-right dark:text-gray-400"
+          >
+            Copyright © 2022. All rights reserved.
+          </p>
+        </div>
+      </footer>
+      <!-- footer end -->
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
